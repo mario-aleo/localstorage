@@ -7,9 +7,26 @@ angular.module("ngapp").config(["$stateProvider", "$urlRouterProvider", function
     $stateProvider.state("main", {
         url: "/main",
         templateUrl: "app/components/main/main.html",
-        title: "Seed",
         controller: "MainController",
         controllerAs: "main"
+    })
+    .state("localstorage", {
+        url: "/localstorage",
+        templateUrl: "app/components/localstorage/localstorage.html",
+        controller: "LocalController",
+        controllerAs: "local"
+    })
+    .state("ngstorage", {
+        url: "/ngstorage",
+        templateUrl: "app/components/ngstorage/ngstorage.html",
+        controller: "NgController",
+        controllerAs: "ng"
+    })
+    .state("sqlite", {
+        url: "/sqlite",
+        templateUrl: "app/components/sqlite/sqlite.html",
+        controller: "SqlController",
+        controllerAs: "sql"
     });
 
 }]);
