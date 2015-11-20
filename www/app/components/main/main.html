@@ -2,29 +2,19 @@
   <md-toolbar>
     <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
       <md-button class="md-icon-button md-primary" aria-label="Back" ng-disabled="true">
-        <ng-md-icon icon="chevron_left"></ng-md-icon>
       </md-button>
 
       <p>{{ main.title }}</p>
 
       <md-button class="md-icon-button md-primary" aria-label="Menu" ng-disabled="true">
-        <ng-md-icon icon="menu"></ng-md-icon>
       </md-button>
     </div>
   </md-toolbar>
 
-  <div flex>
-    <md-whiteframe class="md-whiteframe-7dp" layout="column" layout-align="center center" style="width: 95%; height: 65%;">
-      <md-button class="md-raised" style="width: 95%;" ui-sref="localstorage">
-        LocalStorage
-      </md-button>
-
-      <md-button class="md-raised" style="width: 95%;" ui-sref="ngstorage">
+  <div flex layout="column" layout-align="center center" style="width: 100%;">
+    <md-whiteframe class="md-whiteframe-7dp" layout="column" layout-align="center center" style="width: 20em; height: 30em;">
+      <md-button class="md-raised" ui-sref="ngstorage">
         NgStorage
-      </md-button>
-
-      <md-button class="md-raised" style="width: 95%;" ui-sref="sqlite">
-        SqLite
       </md-button>
     </md-whiteframe>
   </div>

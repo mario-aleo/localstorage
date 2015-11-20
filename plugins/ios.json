@@ -25,10 +25,6 @@
                         {
                             "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
                             "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"SQLitePlugin\"><param name=\"ios-package\" value=\"SQLitePlugin\" /></feature>",
-                            "count": 1
                         }
                     ]
                 }
@@ -45,9 +41,6 @@
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
-        },
-        "cordova-sqlite-storage": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },

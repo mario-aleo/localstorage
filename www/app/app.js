@@ -10,5 +10,4 @@ angular.module("ngapp", [ "ngTouch", "ui.router", "ngMdIcons", "ngMaterial", "ng
             $rootScope.$apply();
         });
     }, false);
-
 });

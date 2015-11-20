@@ -1,51 +1,16 @@
 "use strict";
 
-angular.module("ngapp").controller("MainController", function(shared, $state, $scope, $mdSidenav, $mdComponentRegistry){
+angular.module("ngapp").controller("MainController", function(shared, $state, $scope, $localStorage, $sessionStorage){
 
     var ctrl = this;
 
+    this.storage = $localStorage;
 
-    ctrl.auth = shared.info.auth;
+    this.session = $sessionStorage;
 
+    this.title = "Main";
 
-    ctrl.toggle = angular.noop;
+    console.log(JSON.stringify(this.storage));
 
-
-    ctrl.seed = function(){
-        alert(shared.info.title);
-    };
-
-
-    ctrl.link = function(){
-        alert("");
-    };
-
-
-    ctrl.isOpen = function() { return false };
-    $mdComponentRegistry
-    .when("right")
-    .then( function(sideNav){
-      ctrl.isOpen = angular.bind( sideNav, sideNav.isOpen );
-      ctrl.toggle = angular.bind( sideNav, sideNav.toggle );
-    });
-
-
-    ctrl.toggleRight = function() {
-    $mdSidenav("right").toggle()
-        .then(function(){
-        });
-    };
-
-
-    ctrl.close = function() {
-    $mdSidenav("right").close()
-        .then(function(){
-        });
-    };
-
-
-    $scope.$watch("$state.current.title", function() {
-        ctrl.title = $state.current.title;
-        $scope.$apply();
-    }, true);
+    console.log(JSON.stringify(this.session));
 });

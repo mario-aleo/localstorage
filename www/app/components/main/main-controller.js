@@ -10,7 +10,7 @@ angular.module("ngapp").controller("MainController", function(shared, $state, $s
 
     this.title = "Main";
 
-    console.log(this.storage);
+    console.log(JSON.stringify(this.storage));
 
-    console.log(this.session);
+    console.log(JSON.stringify(this.session));
 });
